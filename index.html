@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="language-toggle">Switch to Hebrew</button>
+        <button id="download-pdf">Download Resume (PDF)</button>
+        <h1 data-en="John Doe" data-he="ג'ון דו">John Doe</h1>
+        <p data-en="Web Developer" data-he="מפתח ווב">Web Developer</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2 data-en="About Me" data-he="אודותיי">About Me</h2>
+            <p data-en="Highly motivated web developer with a passion for creating dynamic and responsive web applications. Experienced in front-end and back-end development." data-he="מפתח ווב בעל מוטיבציה גבוהה עם תשוקה ליצירת יישומי ווב דינמיים ומגיבים. מנוסה בפיתוח צד לקוח וצד שרת.">Highly motivated web developer with a passion for creating dynamic and responsive web applications. Experienced in front-end and back-end development.</p>
+        </section>
+
+        <section id="experience">
+            <h2 data-en="Experience" data-he="ניסיון">Experience</h2>
+            <div class="job">
+                <h3 data-en="Senior Web Developer" data-he="מפתח ווב בכיר">Senior Web Developer</h3>
+                <p data-en="Tech Solutions Inc. | 2020 - Present" data-he="טק סולושנס בע"מ | 2020 - היום">Tech Solutions Inc. | 2020 - Present</p>
+                <ul data-en-list="Developed and maintained web applications using React and Node.js., Collaborated with design team to implement user interfaces., Optimized application for maximum speed and scalability." data-he-list="פיתח ותחזק יישומי ווב באמצעות React ו-Node.js., שיתף פעולה עם צוות העיצוב ליישום ממשקי משתמש., אופטימיזציה של היישום למהירות וקנה מידה מקסימליים.">
+                    <li>Developed and maintained web applications using React and Node.js.</li>
+                    <li>Collaborated with design team to implement user interfaces.</li>
+                    <li>Optimized application for maximum speed and scalability.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3 data-en="Junior Web Developer" data-he="מפתח ווב זוטר">Junior Web Developer</h3>
+                <p data-en="Creative Agency | 2018 - 2020" data-he="קריאייטיב אייג'נסי | 2018 - 2020">Creative Agency | 2018 - 2020</p>
+                <ul data-en-list="Built responsive websites using HTML, CSS, and JavaScript., Assisted in client meetings and project planning., Performed testing and debugging of web applications." data-he-list="בנה אתרי אינטרנט רספונסיביים באמצעות HTML, CSS ו-JavaScript., סייע בפגישות לקוחות ותכנון פרויקטים., ביצע בדיקות וניפוי באגים של יישומי ווב.">
+                    <li>Built responsive websites using HTML, CSS, and JavaScript.</li>
+                    <li>Assisted in client meetings and project planning.</li>
+                    <li>Performed testing and debugging of web applications.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 data-en="Education" data-he="השכלה">Education</h2>
+            <div class="degree">
+                <h3 data-en="B.Sc. in Computer Science" data-he="תואר ראשון במדעי המחשב">B.Sc. in Computer Science</h3>
+                <p data-en="University of Technology | 2014 - 2018" data-he="אוניברסיטת הטכנולוגיה | 2014 - 2018">University of Technology | 2014 - 2018</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 data-en="Skills" data-he="כישורים">Skills</h2>
+            <ul data-en-list="HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Git, Responsive Design, RESTful APIs" data-he-list="HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Git, עיצוב רספונסיבי, RESTful APIs">
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Node.js, Express, MongoDB</li>
+                <li>Git, Responsive Design, RESTful APIs</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2 data-en="Contact" data-he="יצירת קשר">Contact</h2>
+            <p data-en="Email: john.doe@example.com | Phone: (123) 456-7890" data-he="אימייל: john.doe@example.com | טלפון: (123) 456-7890">Email: john.doe@example.com | Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
