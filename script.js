@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadPdfButton = document.getElementById('download-pdf');
     downloadPdfButton.addEventListener('click', () => {
         const element = document.body;
-        html2pdf().from(element).save('resume.pdf');
+        html2pdf().from(element).set({
+            margin: [10, 10, 10, 10], // top, left, bottom, right
+            filename: 'resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 3, useCORS: true }, // Increased scale for better resolution
+            jsPDF: { unit: 'mm', format: 'A4', orientation: 'portrait' }
+        }).save();
     });
 }); 
