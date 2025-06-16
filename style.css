@@ -114,6 +114,28 @@ html[lang="he"] ul {
 }
 
 @media print {
+    #screen-header {
+        display: none;
+    }
+
+    #pdf-header {
+        display: block !important; /* Ensure it's visible when printing */
+        background: #333;
+        color: #fff;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    #pdf-header h1 {
+        margin: 0;
+        font-size: 1.8em;
+    }
+
+    #pdf-header p {
+        font-size: 1.1em;
+        font-weight: normal; /* Adjust font weight for PDF header if needed */
+    }
+
     body {
         font-size: 0.9em;
         line-height: 1.2;
