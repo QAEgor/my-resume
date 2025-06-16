@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const element = document.body;
         html2pdf().from(element).set({
             margin: [10, 10, 10, 10], // top, left, bottom, right
-            filename: 'resume.pdf',
+            filename: 'CV Egor Borisenko.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: {
                 scale: 3, // Increased scale for better resolution
