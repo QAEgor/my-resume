@@ -29,6 +29,12 @@ header p a {
     color: #007BFF; /* Standard link blue */
 }
 
+header p span.phone-number {
+    background-color: transparent !important;
+    text-decoration: none !important;
+    color: inherit; /* Ensure it matches surrounding text color */
+}
+
 main {
     padding: 20px;
     max-width: 900px;
