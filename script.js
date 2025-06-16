@@ -7,20 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateText = () => {
         translatableElements.forEach(element => {
-            if (element.tagName === 'UL') {
-                const enList = element.getAttribute('data-en-list');
-                const heList = element.getAttribute('data-he-list');
-                if (isEnglish && enList) {
-                    element.innerHTML = enList.split(',').map(item => `<li>${item.trim()}</li>`).join('');
-                } else if (!isEnglish && heList) {
-                    element.innerHTML = heList.split(',').map(item => `<li>${item.trim()}</li>`).join('');
-                }
+            if (isEnglish) {
+                element.innerHTML = element.getAttribute('data-en');
             } else {
-                if (isEnglish) {
-                    element.textContent = element.getAttribute('data-en');
-                } else {
-                    element.textContent = element.getAttribute('data-he');
-                }
+                element.innerHTML = element.getAttribute('data-he');
             }
         });
     };

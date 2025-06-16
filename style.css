@@ -18,6 +18,17 @@ header h1 {
     margin: 0;
 }
 
+header p {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+header p a {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #007BFF; /* Standard link blue */
+}
+
 main {
     padding: 20px;
     max-width: 900px;
@@ -27,9 +38,8 @@ main {
 }
 
 section {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 0;
 }
 
 section:last-child {
@@ -40,19 +50,33 @@ h2 {
     color: #333;
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .job, .degree {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.job h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
 }
 
-ul li {
+.job ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+html[lang="he"] .job ul {
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.job ul ul {
+    padding-left: 20px;
+}
+
+.job ul li {
     margin-bottom: 5px;
 }
 
@@ -80,5 +104,5 @@ html[lang="he"] h2 {
 }
 
 html[lang="he"] ul {
-    padding: 0;
+    /* Removed: padding: 0; */
 } 
