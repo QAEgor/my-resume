@@ -111,4 +111,77 @@ html[lang="he"] h2 {
 
 html[lang="he"] ul {
     /* Removed: padding: 0; */
+}
+
+@media print {
+    body {
+        font-size: 0.9em;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    #language-toggle, #download-pdf {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        padding-bottom: 2px;
+        margin-bottom: 5px;
+    }
+
+    section {
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+
+    .job h4 {
+        font-size: 1em;
+        margin-bottom: 2px;
+    }
+
+    .job ul {
+        padding-left: 15px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    html[lang="he"] .job ul {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .job ul ul {
+        padding-left: 15px;
+    }
+
+    .job ul li {
+        margin-bottom: 2px;
+    }
+
+    .degree h3 {
+        font-size: 1.1em;
+        margin-bottom: 2px;
+    }
+
+    .degree p {
+        font-size: 0.9em;
+    }
+
+    #military-service p {
+        font-size: 0.9em;
+    }
 } 
