@@ -26,14 +26,34 @@ document.addEventListener('DOMContentLoaded', () => {
     updateText();
 
     const downloadPdfButton = document.getElementById('download-pdf');
+    const screenHeader = document.getElementById('screen-header');
+    const pdfHeader = document.getElementById('pdf-header');
+
     downloadPdfButton.addEventListener('click', () => {
+        // Hide screen header and show PDF header before generating PDF
+        if (screenHeader) screenHeader.style.display = 'none';
+        if (pdfHeader) pdfHeader.style.display = 'block';
+
         const element = document.body;
         html2pdf().from(element).set({
             margin: [10, 10, 10, 10], // top, left, bottom, right
             filename: 'resume.pdf',
             image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 3, useCORS: true }, // Increased scale for better resolution
+            html2canvas: {
+                scale: 3, // Increased scale for better resolution
+                useCORS: true,
+                // We no longer need ignoreElements here as we are controlling visibility directly
+            },
             jsPDF: { unit: 'mm', format: 'A4', orientation: 'portrait' }
-        }).save();
+        }).save().then(() => {
+            // Revert display styles after PDF generation
+            if (screenHeader) screenHeader.style.display = 'block';
+            if (pdfHeader) pdfHeader.style.display = 'none';
+        }).catch(error => {
+            console.error('Error generating PDF:', error);
+            // Ensure visibility is reverted even on error
+            if (screenHeader) screenHeader.style.display = 'block';
+            if (pdfHeader) pdfHeader.style.display = 'none';
+        });
     });
 }); 
